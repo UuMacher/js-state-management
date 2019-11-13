@@ -1,0 +1,39 @@
+{
+  "name": "js-state-management",
+  "version": "1.0.0",
+  "description": "An overview of existing state-management libraries in the JavaScript world",
+  "main": "index.mdx",
+  "dependencies": {},
+  "devDependencies": {
+    "mdx-deck": "^3.0.13"
+  },
+  "scripts": {
+    "start": "mdx-deck index.mdx",
+    "build": "mdx-deck build index.mdx",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/UuMacher/js-state-management.git"
+  },
+  "keywords": [
+    "redux",
+    "vuex",
+    "ngrx",
+    "ngxs",
+    "react",
+    "vue",
+    "angular",
+    "state",
+    "javascript",
+    "js",
+    "presentation",
+    "store"
+  ],
+  "author": "Matthieu Holzer <matthieu.holzer@unterschiedundmacher.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/UuMacher/js-state-management/issues"
+  },
+  "homepage": "https://github.com/UuMacher/js-state-management#readme"
+}
