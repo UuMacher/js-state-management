@@ -6,7 +6,8 @@ export const theme = {
         ...vsDark.colors,
         text: '#fff',
         primary: '#f39',
-        secondary: '#b585e0'
+        secondary: '#b585e0',
+        tertiary: '#ecaf20'
     },
     fontSizes: [
         12, 14, 16, 20, 24, 24, 24, 24
@@ -18,6 +19,9 @@ export const theme = {
         },
         h1:  {
             color: 'primary'
+        },
+        strong: {
+            color: 'tertiary'
         }
     }
 };

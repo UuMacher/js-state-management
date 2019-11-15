@@ -1,5 +1,5 @@
 import { CodeSurfer, CodeSurferColumns,Step} from 'code-surfer';
-import { Figure, Footnotes, Quote, Title } from './mdx-components/index';
+import { Figure, Footnotes, Stackblitz, Quote, Title } from './mdx-components/index';
 import { theme as customTheme } from './theme';
 export const theme = customTheme;
 
@@ -10,7 +10,7 @@ export const theme = customTheme;
 # What is it?
 
 <Quote author="Raquel Moss" url="https://egghead.io/articles/what-is-state-why-do-i-need-to-manage-it">
-State management makes the <strong>state of your app</strong> tangible in the form of a <strong>data structure</strong> that you can read from and write to. It makes your ‘invisible’ state clearly visible for you to work with.
+State management makes the <strong>state of your app</strong> tangible in the form of a <strong>data structure</strong> that you can read from and write to. It makes your ‘invisible’ state clearly visible for you <strong>to work</strong> with.
 </Quote>
 
 ---
@@ -83,6 +83,8 @@ Three principles
 ---
 
 ## React + Redux
+
+<Stackblitz id="uum-react-redux-example"></Stackblitz>
 
 ---
 

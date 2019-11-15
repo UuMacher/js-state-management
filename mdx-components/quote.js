@@ -20,7 +20,7 @@ export const Quote = ({ author, url, children }) => {
   return (
     <Blockquote cite={url}>
       <p>"{children}"</p>
-      <em>{author}</em> – <Link href="https://en.wikipedia.org/wiki/State_management">https://en.wikipedia.org/wiki/State_management</Link>
+      <em>{author}</em> – <Link href={url}>{url}</Link>
     </Blockquote>
   );
 };
