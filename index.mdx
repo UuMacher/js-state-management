@@ -1,38 +1,119 @@
-# State management in JavaScript
+import { CodeSurfer, CodeSurferColumns,Step} from 'code-surfer';
+import { Figure, Footnotes, Quote, Title } from './mdx-components/index';
+import { theme as customTheme } from './theme';
+export const theme = customTheme;
+
+<Title>State management in JavaScript</Title>
 
 ---
 
-# Flux
+# What is it?
 
-https://facebook.github.io/flux/
-
----
-
-# Redux
-
-https://redux.js.org/
+<Quote author="Raquel Moss" url="https://egghead.io/articles/what-is-state-why-do-i-need-to-manage-it">
+State management makes the <strong>state of your app</strong> tangible in the form of a <strong>data structure</strong> that you can read from and write to. It makes your ‘invisible’ state clearly visible for you to work with.
+</Quote>
 
 ---
 
-# Store
+# When do I need it?
+
+- UI **components** that have dependencies (shared state)
+- **SPAs/PWAs** (React, Vue, Angular, ...)
+- **mobile** apps (React Native, Flutter, ...)
+
 
 ---
 
-# Action
+# Flux (2014)
+
+- pattern by Facebook
+- client-side web applications
+- answer to two-way data binding (AngularJS)
+- unidirectional data flow
+- ≠ MVC
+
+<Footnotes>
+    <a href="https://facebook.github.io/flux/">https://facebook.github.io/flux/</a>
+</Footnotes>
 
 ---
 
-# Reducer
+# Flux (2)
+
+<Figure src="https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-1300w.png" alt="Basic Flux Structure">
+    <a href="https://facebook.github.io/flux/docs/in-depth-overview">https://facebook.github.io/flux/docs/in-depth-overview</a>
+</Figure>
+
+
+- Action
+    - Contain new data and type information
+- Dispatchers
+- Stores
+- Views
 
 ---
 
-# Selector
+# Flux (3)
+
+
+<Figure src="https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-explained-1300w.png" alt="Detailed Flux flow">
+    <a href="https://facebook.github.io/flux/docs/in-depth-overview">https://facebook.github.io/flux/docs/in-depth-overview</a>
+</Figure>
+
+---
+
+# Redux (2015)
+
+Three principles
+- Single source of truth (= one store)
+- State is read-only (= only way to change by emitting actions)
+- Changes are made with pure functions (pure reducers)
+
+<Footnotes>
+    <a href="https://redux.js.org/">https://redux.js.org/</a>
+    <a href="https://redux.js.org/introduction/three-principles">https://redux.js.org/introduction/three-principles</a>
+</Footnotes>
+
+---
+
+<Figure src="https://miro.medium.com/max/1572/1*f0yed8d3cHXd615cV1oBKw.png" alt="Redux flow">
+    <a href="https://medium.com/@jdc91xt/the-redux-crash-course-7759b09500fa">https://medium.com/@jdc91xt/the-redux-crash-course-7759b09500fa</a>
+</Figure>
+
+---
+
+## React + Redux
+
+---
+
+<CodeSurfer>
+
+  ```js 1:5 file=./redux-react/store.js title="Store" 
+  ```
+
+</CodeSurfer>
+
+---
+
+### Action
+
+---
+
+### Reducer
+
+---
+
+### Selector
 
 https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8
 
 ---
 
 ## React + Redux
+
+Pros / Cons
+
+- verbose/boilerplate code
 
 https://react-redux.js.org/
 https://github.com/reduxjs/redux-thunk
@@ -41,17 +122,50 @@ https://github.com/rematch/rematch
 
 ---
 
-## Vue + Vuex
+## Vue + Vuex (2016)
 
 https://vuex.vuejs.org/
 
 ---
 
-## Angular + NgRx
+### Store
+
+---
+
+### Mutations
+
+---
+
+### Actions
+
+---
+
+### Getters
+
+---
+
+## Angular + NgRx (2017)
 
 https://ngrx.io/
 
-https://www.ngxs.io/
+
+![NgRx lifecycle](https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png)
+
+---
+
+### Store
+
+---
+
+### Actions
+
+---
+
+### Reducers
+
+---
+
+### Selectors
 
 ---
 
@@ -74,15 +188,37 @@ Effects
 
 ---
 
-# MobX
+## NGXS (2018)
+
+https://www.ngxs.io/
+
+---
+
+# MobX (2017)
 
 https://github.com/mobxjs/mobx
 
 ---
 
-# React Hooks & Context API
+# React Hooks & Context API (2019 officially)
 
 https://reactjs.org/docs/hooks-intro.html
 https://dev.to/gloriamaris/implementing-state-management-using-context-api-and-hooks-in-react-36jk
+
+---
+
+# Hyperapp
+
+---
+
+# Svelte
+
+---
+
+# Conclusion
+
+It depends ;)
+
+Redux etc. not always required, alternatives
 
 ---
