@@ -7,6 +7,14 @@ const Footer = styled.footer`
   left: 0;
   padding: 1em;
   width: 100%;
+
+  > ul {
+    padding: 0;
+  }
+
+  > ul > li {
+    list-style: none;
+  }
 `
 
 export const Footnotes = ({children}) => {

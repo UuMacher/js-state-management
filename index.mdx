@@ -3,7 +3,7 @@ import { Figure, Footnotes, Stackblitz, Quote, Title } from './mdx-components/in
 import { theme as customTheme } from './theme';
 export const theme = customTheme;
 
-<Title>State management in JavaScript</Title>
+<Title>JavaScript state management</Title>
 
 ---
 
@@ -30,6 +30,8 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 - client-side web applications
 - answer to two-way data binding (AngularJS)
 - unidirectional data flow
+- reactive programming, data-flow programming
+- no direct data mutation, mutations are described as actions
 - ≠ MVC
 
 <Footnotes>
@@ -38,23 +40,17 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 
 ---
 
-# Flux (2)
-
 <Figure src="https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-1300w.png" alt="Basic Flux Structure">
     <a href="https://facebook.github.io/flux/docs/in-depth-overview">https://facebook.github.io/flux/docs/in-depth-overview</a>
 </Figure>
 
 
-- Action
-    - Contain new data and type information
-- Dispatchers
-- Stores
-- Views
+- **Actions**: Contain data and type information
+- **Dispatchers**: Dispatch the actions
+- **Stores**: Contain the state
+- **Views**: Re-render if the stores update
 
 ---
-
-# Flux (3)
-
 
 <Figure src="https://facebook.github.io/flux/img/overview/flux-simple-f8-diagram-explained-1300w.png" alt="Detailed Flux flow">
     <a href="https://facebook.github.io/flux/docs/in-depth-overview">https://facebook.github.io/flux/docs/in-depth-overview</a>
@@ -62,7 +58,21 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 
 ---
 
+## Basic principle
+
+```javascript
+(state, action) => state
+```
+
+<Footnotes>
+    <a href="https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1?slide=40">https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1?slide=40</a>
+</Footnotes>
+
+---
+
 # Redux (2015)
+
+Event Sourcing
 
 Three principles
 - Single source of truth (= one store)
@@ -70,8 +80,10 @@ Three principles
 - Changes are made with pure functions (pure reducers)
 
 <Footnotes>
-    <a href="https://redux.js.org/">https://redux.js.org/</a>
-    <a href="https://redux.js.org/introduction/three-principles">https://redux.js.org/introduction/three-principles</a>
+    <ul>
+        <li><a href="https://redux.js.org/">https://redux.js.org</a></li>
+        <li><a href="https://redux.js.org/introduction/three-principles">https://redux.js.org/introduction/three-principles</a></li>
+    </ul>
 </Footnotes>
 
 ---

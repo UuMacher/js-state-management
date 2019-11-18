@@ -7,6 +7,8 @@ const StyledFigure = styled.figure`
 
 const Image = styled.img`
   height: auto;
+  max-height: 80vh;
+  object-fit: contain;
   width: 100%;
 `;
 
