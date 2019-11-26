@@ -1,4 +1,4 @@
-import { vsDark } from "@code-surfer/themes";
+import { vsDark } from '@code-surfer/themes';
 
 export const theme = {
     ...vsDark,
@@ -7,21 +7,29 @@ export const theme = {
         text: '#fff',
         primary: '#f39',
         secondary: '#b585e0',
-        tertiary: '#ecaf20'
+        tertiary: '#ecaf20',
     },
-    fontSizes: [
-        12, 14, 16, 20, 24, 24, 24, 24
-    ],
+    fontSizes: [12, 14, 16, 20, 24, 24, 24, 24],
     styles: {
         ...vsDark.styles,
         a: {
-            color: 'secondary'
+            color: 'secondary',
         },
-        h1:  {
-            color: 'primary'
+        h1: {
+            color: 'primary',
+        },
+        h2: {
+            color: 'primary',
         },
         strong: {
-            color: 'tertiary'
-        }
-    }
+            color: 'tertiary',
+        },
+        table: {
+            padding: '1rem',
+        },
+        th: {
+            borderBottom: '1px solid #fff',
+            color: 'tertiary',
+        },
+    },
 };
