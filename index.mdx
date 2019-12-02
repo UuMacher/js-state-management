@@ -63,11 +63,6 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 ```js
 (state, action) => new state
 ```
-
-<Footnotes>
-    <a href="https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1?slide=40">https://speakerdeck.com/jmorrell/jsconf-uy-flux-those-who-forget-the-past-dot-dot-dot-1?slide=40</a>
-</Footnotes>
-
 ---
 
 # Redux (2015)
@@ -81,7 +76,6 @@ Three principles
 
 <Footnotes>
     <ul>
-        <li><a href="https://redux.js.org/">https://redux.js.org</a></li>
         <li><a href="https://redux.js.org/introduction/three-principles">https://redux.js.org/introduction/three-principles</a></li>
         <li><a href="https://www.freecodecamp.org/news/redux-in-24-lines-of-code/">https://www.freecodecamp.org/news/redux-in-24-lines-of-code/</a></li>
         <li><a href="https://www.robinwieruch.de/redux-javascript">https://www.robinwieruch.de/redux-javascript</a></li>
@@ -108,37 +102,51 @@ Three principles
 
 <CodeSurfer>
 
-  ```js 1:5 file=./redux-react/store.js title="Store" 
-  ```
+```js 5:7 file=./redux-react/store.js title="Store" 
+```
+
+```js 1:3 file=./redux-react/actions.js title="Actions" 
+```
+
+```js 1:3,5:17 file=./redux-react/actions.js title="Actions" 
+```
+
+```js 1:6 file=./redux-react/reducers.js title="Reducers" 
+```
+
+```js 7:30 file=./redux-react/reducers.js title="Reducers" 
+```
+
+```js 11:18 file=./redux-react/App.jsx title="React integration" 
+```
+
+```js 22:33 file=./redux-react/App.jsx title="React integration" 
+```
+
+```js 9,14,24 file=./redux-react/App.jsx title="Selectors" 
+```
 
 </CodeSurfer>
 
 ---
 
-### Action
+### Selectors
 
----
-
-### Reducer
-
----
-
-### Selector
-
-https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8
+<Quote author="Matthew Holman" url="https://medium.com/@matthew.holman/what-is-a-redux-selector-a517acee1fe8">
+    A “selector” is <strong>simply a function</strong> that accepts Redux <strong>state</strong> as an argument and <strong>returns data</strong> that is derived from that state.
+</Quote>
 
 ---
 
 ## React + Redux
 
-Pros / Cons
+### Additional
 
-- verbose/boilerplate code
-
-https://react-redux.js.org/
-https://github.com/reduxjs/redux-thunk
-https://github.com/reduxjs/reselect (Memoization)
-https://github.com/rematch/rematch
+* Asynchronous "actions" and side effects [redux-thunk](https://github.com/reduxjs/redux-thunk)
+* Selectors Memoization [reselect](https://github.com/reduxjs/reselect)
+* Redux alternative with less boilerplate [rematch](https://github.com/rematch/rematch)
+* Redux style guide (https://redux.js.org/style-guide/style-guide)
+* Redux dev tools (https://github.com/reduxjs/redux-devtools)
 
 ---
 
