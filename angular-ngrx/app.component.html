@@ -1,0 +1,8 @@
+<div>
+	<app-output [value]="counter$ | async" label="Counter"></app-output>
+	<app-output [value]="doubleCounter$ | async" label="Counter * 2"></app-output>
+	<app-output [value]="isPrime$ | async" label="Is prime number?"></app-output>
+	<app-button (click)="onIncrement()">Increment (+)</app-button>
+	<app-button (click)="onDecrement()">Decrement (-)</app-button>
+	<app-button (click)="onReset()">Reset</app-button>
+</div>
