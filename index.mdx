@@ -1,7 +1,13 @@
 import { CodeSurfer, CodeSurferColumns,Step} from 'code-surfer';
 import { Figure, Footnotes, GithubInfo, Stackblitz, Quote, Title } from './mdx-components/index';
 import { theme as customTheme } from './theme';
+
 export const theme = customTheme;
+
+import basket1 from './images/basket-1.png';
+import basket2 from './images/basket-2.png';
+import basket3 from './images/basket-3.png';
+
 
 <Title>JavaScript state management</Title>
 
@@ -15,12 +21,36 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 
 ---
 
+# Why would i need it?
+
+<img src={basket1} style={{width:'300px'}}/>
+
+---
+
+# Why would i need it?
+
+<img src={basket2} style={{width:'300px'}}/>
+
+---
+
+# Why would i need it?
+
+<img src={basket3} style={{width:'300px'}}/>
+
+---
+
 # When do I need it?
 
 - UI **components** that have dependencies (shared state)
+- Creating (complex) web applications architectures
 - **SPAs/PWAs** (React, Vue, Angular, ...)
 - **mobile** apps (React Native, Flutter, ...)
 
+---
+
+# So basically always?
+
+No. Don't overengineer simple applications.
 
 ---
 
@@ -66,8 +96,6 @@ State management makes the <strong>state of your app</strong> tangible in the fo
 ---
 
 # Redux (2015)
-
-Event Sourcing
 
 Three principles
 - Single source of truth (= one store)
@@ -138,6 +166,14 @@ Three principles
 
 ---
 
+## Basic selector principle
+
+```js
+(state) => state.something
+```
+
+---
+
 ## React + Redux
 
 ### Additional
@@ -153,6 +189,8 @@ Three principles
 ## Vue + Vuex (2016)
 
 <GithubInfo repo="vuejs/vuex"></GithubInfo>
+
+---
 
 <Figure src="https://vuex.vuejs.org/vuex.png" alt="Vuex architecture">
     <a href="https://vuex.vuejs.org/vuex.png">https://vuex.vuejs.org/vuex.png</a>
@@ -194,6 +232,9 @@ Three principles
 ## Angular + NgRx (2017)
 
 <GithubInfo repo="ngrx/platform"></GithubInfo>
+
+---
+
 
 <Figure src="https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png" alt="NgRx lifecycle">
     <a href="https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png">https://ngrx.io/generated/images/guide/store/state-management-lifecycle.png</a>
