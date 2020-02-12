@@ -59,10 +59,9 @@ No. Don't overengineer simple applications.
 - pattern by Facebook
 - client-side web applications
 - answer to two-way data binding (AngularJS)
-- unidirectional data flow
+- <strong>unidirectional data flow</strong>
 - reactive programming, data-flow programming
-- no direct data mutation, mutations are described as actions
-- ≠ MVC
+- <strong>no direct data mutation</strong>, mutations are described as actions
 
 <Footnotes>
     <a href="https://facebook.github.io/flux/">https://facebook.github.io/flux/</a>
@@ -98,9 +97,9 @@ No. Don't overengineer simple applications.
 # Redux (2015)
 
 Three principles
-- Single source of truth (= one store)
-- State is read-only (= only way to change by emitting actions)
-- Changes are made with pure functions (pure reducers)
+- <strong>Single source of truth</strong> (= one store)
+- State is <strong>read-only</strong> (= only way to change by emitting actions)
+- Changes are made with <strong>pure functions</strong> (pure reducers)
 
 <Footnotes>
     <ul>
@@ -229,7 +228,7 @@ Three principles
 
 ---
 
-## Angular + NgRx (2017)
+## Angular + NGRX (2017)
 
 <GithubInfo repo="ngrx/platform"></GithubInfo>
 
@@ -313,6 +312,12 @@ NGXS is modeled after the <strong>CQRS pattern</strong> popularly implemented in
 
 ---
 
+<Figure src="https://raw.githubusercontent.com/mobxjs/mobx/master/docs/assets/flow.png" alt="Mobx flow">
+    <a href="https://raw.githubusercontent.com/mobxjs/mobx/master/docs/assets/flow.png">https://raw.githubusercontent.com/mobxjs/mobx/master/docs/assets/flow.png</a>
+</Figure>
+
+---
+
 ## MobX - React Example
 
 <GithubInfo repo="mhlzr/react-mobx-card-game"></GithubInfo>
@@ -323,9 +328,16 @@ https://react-mobx-card-game.now.sh
 
 # React Hooks & Context API (2019 officially)
 
-https://reactjs.org/docs/hooks-intro.html
-https://dev.to/gloriamaris/implementing-state-management-using-context-api-and-hooks-in-react-36jk
-https://github.com/facebookincubator/redux-react-hook
+<Quote url="https://reactjs.org/docs/hooks-intro.html"><strong>Hooks</strong> are a new addition in React 16.8. They let you use state and other React features without writing a class.</Quote>
+
+<Quote url="https://reactjs.org/docs/context.html"><strong>Context</strong> provides a way to pass data through the component tree without having to pass props down manually at every level.</Quote>
+
+<Footnotes>
+    <ul>
+        <li><a href="https://dev.to/gloriamaris/implementing-state-management-using-context-api-and-hooks-in-react-36jk">https://dev.to/gloriamaris/implementing-state-management-using-context-api-and-hooks-in-react-36jk</a></li>
+        <li><a href="https://github.com/facebookincubator/redux-react-hook">https://github.com/facebookincubator/redux-react-hook</a></li>
+    </ul>
+</Footnotes>
 
 ---
 
@@ -333,18 +345,27 @@ https://github.com/facebookincubator/redux-react-hook
 
 <GithubInfo repo="jorgebucaran/hyperapp"></GithubInfo>
 
+- out of the box state management included
+- basically not usable without state and actions
+
 ---
 
 # Svelte
 
 <GithubInfo repo="sveltejs/svelte"></GithubInfo>
 
+- simplified stores
+- writable, readable stores
+- subscriptions to stores `subscribe`
+- mutations via `update` or `set`
+
+
 ---
 
 # Conclusion
 
-It depends ;)
+## Which one to use? 
 
-Redux etc. not always required, alternatives
+<strong>It depends 😉</strong>
 
----
+Strongly depends on the use case and framework (React, Vue, Angular,...) being used. If none of them is already in use consider using a lightweight batteries included library like Svelte or Hyperapp.

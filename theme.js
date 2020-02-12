@@ -27,6 +27,9 @@ export const theme = {
         table: {
             padding: '1rem',
         },
+        p : {
+            maxWidth: '60ch'
+        },
         th: {
             borderBottom: '1px solid #fff',
             color: 'tertiary',
